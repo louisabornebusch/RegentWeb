@@ -1,29 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
-  const t = useTranslations('nav');
-  const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: t('home'), href: '/' },
-    { name: t('assignments'), href: '/uppdrag' },
-    { name: t('about'), href: '/om-oss' },
-    { name: t('contact'), href: '/kontakt' },
-    { name: t('news'), href: '/aktuellt' },
-    { name: t('careers'), href: '/jobb' },
+    { name: 'Hem', href: '/' },
+    { name: 'Uppdrag', href: '/uppdrag' },
+    { name: 'Om oss', href: '/om-oss' },
+    { name: 'Kontakt', href: '/kontakt' },
+    { name: 'Aktuellt', href: '/aktuellt' },
+    { name: 'Jobb', href: '/jobb' },
   ];
-
-  const toggleLanguage = () => {
-    const newLocale = locale === 'sv' ? 'en' : 'sv';
-    window.location.href = `/${newLocale}`;
-  };
 
   return (
     <header className="bg-white shadow-sm border-b border-regent-gray-200">
@@ -43,51 +35,49 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-regent-gray-700 hover:text-regent-blue transition-colors duration-200"
+                className="text-regent-gray-700 hover:text-regent-blue transition-colors font-medium"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
 
-          {/* Language Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1"
-            >
-              <Globe className="h-4 w-4" />
-              <span>{locale === 'sv' ? 'EN' : 'SV'}</span>
-            </Button>
-
-            {/* Mobile menu button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button asChild>
+              <Link href="/kontakt">Kontakta oss</Link>
             </Button>
           </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2 rounded-md text-regent-gray-700 hover:text-regent-blue hover:bg-regent-gray-50"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-regent-gray-200">
-            <nav className="flex flex-col space-y-2">
+          <div className="md:hidden border-t border-regent-gray-200 py-4">
+            <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-regent-gray-700 hover:text-regent-blue hover:bg-regent-gray-50 rounded-md transition-colors duration-200"
+                  className="text-regent-gray-700 hover:text-regent-blue transition-colors font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
+              <div className="pt-4">
+                <Button asChild className="w-full">
+                  <Link href="/kontakt">Kontakta oss</Link>
+                </Button>
+              </div>
             </nav>
           </div>
         )}

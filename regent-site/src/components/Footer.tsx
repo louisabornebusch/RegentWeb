@@ -1,12 +1,7 @@
-'use client';
-
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 import { Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
-  const t = useTranslations('contact');
-
   return (
     <footer className="bg-regent-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -26,12 +21,12 @@ export function Footer() {
             <div className="space-y-2 text-sm text-regent-gray-300">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>{t('address')}</span>
+                <span>Storgatan 123, 111 22 Stockholm</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href={`mailto:${t('email')}`} className="hover:text-white transition-colors">
-                  {t('email')}
+                <a href="mailto:info@regent.se" className="hover:text-white transition-colors">
+                  info@regent.se
                 </a>
               </div>
             </div>

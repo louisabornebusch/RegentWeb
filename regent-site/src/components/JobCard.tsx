@@ -1,9 +1,8 @@
 'use client';
 
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { useTranslations } from 'next-intl';
 import { MapPin, Calendar, Clock, ArrowRight } from 'lucide-react';
 
 interface JobCardProps {
@@ -19,59 +18,44 @@ interface JobCardProps {
 }
 
 export function JobCard({ job }: JobCardProps) {
-  const t = useTranslations('assignments');
-
   return (
-    <Card data-testid="job-card" className="group hover:shadow-lg transition-all duration-300 border-regent-gray-200 hover:border-regent-blue/20 h-full">
-      <CardContent className="p-6">
-        <div className="flex items-start justify-between mb-4">
-          <h3 className="text-xl font-semibold text-regent-gray-900 group-hover:text-regent-blue transition-colors">
-            {job.title}
-          </h3>
-          <Badge variant="outline" className="text-regent-blue border-regent-blue">
+    <Card className="h-full hover:shadow-lg transition-shadow" data-testid="job-card">
+      <CardHeader>
+        <div className="flex justify-between items-start mb-2">
+          <Badge variant="secondary" className="text-xs">
             {job.workloadPercent}%
           </Badge>
+          <div className="flex items-center text-sm text-regent-gray-600">
+            <Clock className="h-4 w-4 mr-1" />
+            {job.startDate}
+          </div>
         </div>
-        
-        <p className="text-regent-gray-600 mb-4 line-clamp-3">
+        <CardTitle className="text-lg">{job.title}</CardTitle>
+        <CardDescription className="text-sm text-regent-gray-600">
+          <div className="flex items-center">
+            <MapPin className="h-4 w-4 mr-1" />
+            {job.location}
+          </div>
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col h-full">
+        <p className="text-regent-gray-700 text-sm mb-4 flex-grow">
           {job.summary}
         </p>
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          {job.tech.slice(0, 3).map((tech) => (
-            <Badge key={tech} variant="secondary" className="text-xs">
-              {tech}
-            </Badge>
-          ))}
-          {job.tech.length > 3 && (
-            <Badge variant="secondary" className="text-xs">
-              +{job.tech.length - 3} mer
-            </Badge>
-          )}
-        </div>
-
-        <div className="flex items-center gap-4 text-sm text-regent-gray-500 mb-4">
-          <div className="flex items-center gap-1">
-            <MapPin className="h-4 w-4" />
-            <span>{job.location}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Calendar className="h-4 w-4" />
-            <span>{job.startDate}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            <span>{job.workloadPercent}%</span>
+        <div className="mb-4">
+          <div className="flex flex-wrap gap-1">
+            {job.tech.map((tech, index) => (
+              <Badge key={index} variant="outline" className="text-xs">
+                {tech}
+              </Badge>
+            ))}
           </div>
         </div>
-      </CardContent>
-      
-      <CardFooter className="pt-0">
-        <Button className="w-full group-hover:bg-regent-blue group-hover:text-white transition-colors">
-          {t('view')}
+        <Button className="w-full" size="sm">
+          Läs mer
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
-      </CardFooter>
+      </CardContent>
     </Card>
   );
 }

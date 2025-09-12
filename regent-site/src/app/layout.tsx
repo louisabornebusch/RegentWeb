@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { Header } from '@/components/Header';
+import { TrustBar } from '@/components/TrustBar';
+import { Footer } from '@/components/Footer';
+import { SkipLink } from '@/components/SkipLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,22 +31,23 @@ export const metadata: Metadata = {
   },
 };
 
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
-
   return (
     <html>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <div className="min-h-screen flex flex-col">
+          <SkipLink />
+          <TrustBar />
+          <Header />
+          <main id="main-content" className="flex-1" role="main">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

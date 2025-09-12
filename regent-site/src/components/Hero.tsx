@@ -1,12 +1,9 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { useTranslations } from 'next-intl';
 import { ArrowRight, Users, Shield, TrendingUp } from 'lucide-react';
 
 export function Hero() {
-  const t = useTranslations('home.hero');
-
   return (
     <section className="relative bg-gradient-to-br from-regent-blue to-regent-blue-dark text-white overflow-hidden">
       {/* Background pattern */}
@@ -15,15 +12,15 @@ export function Hero() {
       <div className="relative container mx-auto px-4 py-24 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            {t('title')}
+            IT som det borde vara
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            {t('subtitle')}
+            Vi skapar värde genom teknisk excellens och mänsklig samhörighet
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-white text-regent-blue hover:bg-blue-50">
-              {t('cta')}
+              Utforska våra uppdrag
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-regent-blue">
