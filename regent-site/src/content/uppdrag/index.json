@@ -1,0 +1,74 @@
+[
+  {
+    "id": "backend-developer-stockholm",
+    "title": "Senior Backend Developer",
+    "summary": "Vi söker en erfaren backend-utvecklare för att bygga skalbara mikrotjänster i Java/Spring Boot. Du kommer arbeta med moderna arkitekturer och cloud-native lösningar.",
+    "tech": ["Java", "Spring Boot", "Docker", "Kubernetes", "PostgreSQL", "Redis"],
+    "location": "Stockholm",
+    "startDate": "2024-02-01",
+    "workloadPercent": 100,
+    "duration": "12 månader",
+    "client": "Fintech-bolag",
+    "experience": "5+ år"
+  },
+  {
+    "id": "frontend-developer-goteborg",
+    "title": "Frontend Developer React",
+    "summary": "Söker en frontend-utvecklare med stark erfarenhet av React och TypeScript. Du kommer arbeta med moderna UI-bibliotek och säkerställa excellent användarupplevelse.",
+    "tech": ["React", "TypeScript", "Next.js", "Tailwind CSS", "GraphQL", "Jest"],
+    "location": "Göteborg",
+    "startDate": "2024-01-15",
+    "workloadPercent": 80,
+    "duration": "8 månader",
+    "client": "E-handelsplattform",
+    "experience": "3+ år"
+  },
+  {
+    "id": "devops-engineer-malmo",
+    "title": "DevOps Engineer",
+    "summary": "Vi behöver en DevOps-engineer för att automatisera CI/CD-pipelines och förbättra infrastrukturhantering. Erfarenhet av AWS och containerisering krävs.",
+    "tech": ["AWS", "Terraform", "Docker", "Jenkins", "Python", "Monitoring"],
+    "location": "Malmö",
+    "startDate": "2024-03-01",
+    "workloadPercent": 100,
+    "duration": "6 månader",
+    "client": "SaaS-startup",
+    "experience": "4+ år"
+  },
+  {
+    "id": "data-engineer-remote",
+    "title": "Data Engineer",
+    "summary": "Söker en data engineer för att bygga data pipelines och ETL-processer. Du kommer arbeta med stora datamängder och moderna dataplattformar.",
+    "tech": ["Python", "Apache Spark", "Airflow", "Snowflake", "dbt", "Kafka"],
+    "location": "Remote",
+    "startDate": "2024-02-15",
+    "workloadPercent": 100,
+    "duration": "10 månader",
+    "client": "Analytics-bolag",
+    "experience": "5+ år"
+  },
+  {
+    "id": "cybersecurity-consultant-stockholm",
+    "title": "Cybersecurity Consultant",
+    "summary": "Vi söker en cybersäkerhetsexpert för att genomföra säkerhetsauditer och implementera säkerhetslösningar enligt ISO 27001.",
+    "tech": ["Security Auditing", "ISO 27001", "Penetration Testing", "SIEM", "Risk Assessment"],
+    "location": "Stockholm",
+    "startDate": "2024-01-30",
+    "workloadPercent": 100,
+    "duration": "18 månader",
+    "client": "Bank & Finans",
+    "experience": "6+ år"
+  },
+  {
+    "id": "ai-ml-engineer-goteborg",
+    "title": "AI/ML Engineer",
+    "summary": "Söker en AI/ML-engineer för att utveckla maskininlärningsmodeller och AI-lösningar. Du kommer arbeta med moderna ML-ramverk och cloud-plattformar.",
+    "tech": ["Python", "TensorFlow", "PyTorch", "MLflow", "AWS SageMaker", "Kubernetes"],
+    "location": "Göteborg",
+    "startDate": "2024-03-15",
+    "workloadPercent": 100,
+    "duration": "12 månader",
+    "client": "AI-startup",
+    "experience": "4+ år"
+  }
+]
