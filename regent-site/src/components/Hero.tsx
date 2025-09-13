@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Shield, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
+import { DraggableGlassCard } from '@/components/DraggableGlassCard';
 
 export function Hero() {
   return (
@@ -52,21 +53,21 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Great Place to Work Award */}
-          <div className="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-2">
+          {/* Great Place to Work Award - Draggable */}
+          <DraggableGlassCard className="p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg max-w-sm">
+            <div className="text-center space-y-3">
+              <div className="text-lg font-bold text-regent-gray-900">
                 Bäst i Sverige och Europa 2 år i rad
               </div>
-              <div className="text-blue-100 text-sm italic">
+              <div className="text-regent-gray-900 text-xs italic leading-relaxed">
                 "Att lyckas samla några av de mest kompetenta individerna i branschen under samma tak är en bedrift. 
                 Att dessutom få dem att fungera så fantastiskt bra ihop är ett underverk."
               </div>
-              <div className="text-blue-200 text-xs mt-2">
+              <div className="text-regent-gray-700 text-xs">
                 - Juryns motivering, Great Place To Work
               </div>
             </div>
-          </div>
+          </DraggableGlassCard>
         </div>
       </div>
     </section>

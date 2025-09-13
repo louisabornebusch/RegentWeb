@@ -355,3 +355,8 @@
   border: 1px solid rgba(85, 194, 240, 0.25);
   transform: translateY(-1px);
 }
+
+/* Draggable Glass Card Effects */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
