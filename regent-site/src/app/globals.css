@@ -43,9 +43,9 @@
   --radius-xl: calc(var(--radius) + 4px);
   
   /* Regent brand colors */
-  --color-regent-blue: #1e40af;
-  --color-regent-blue-light: #3b82f6;
-  --color-regent-blue-dark: #1e3a8a;
+  --color-regent-blue: #55c2f0;
+  --color-regent-blue-light: #7dd3f3;
+  --color-regent-blue-dark: #3bb8ed;
   --color-regent-gray-50: #f8fafc;
   --color-regent-gray-100: #f1f5f9;
   --color-regent-gray-200: #e2e8f0;
@@ -147,4 +147,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Rolling animation for stats */
+@keyframes roll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-roll {
+  animation: roll 20s linear infinite;
 }

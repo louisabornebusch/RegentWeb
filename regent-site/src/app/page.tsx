@@ -2,6 +2,7 @@
 
 import { Hero } from '@/components/Hero';
 import { ValueCard } from '@/components/ValueCard';
+import { StatsSection } from '@/components/StatsSection';
 import { Shield, Users, TrendingUp, Code, Cloud, TestTube, Users2 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -58,6 +59,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      <StatsSection />
 
       <section className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-3xl font-bold text-regent-gray-900 mb-12">
