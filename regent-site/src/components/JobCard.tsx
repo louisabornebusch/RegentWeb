@@ -19,7 +19,7 @@ interface JobCardProps {
 
 export function JobCard({ job }: JobCardProps) {
   return (
-    <Card className="h-full hover:shadow-lg transition-shadow" data-testid="job-card">
+    <Card className="h-full glass-effect hover:shadow-lg transition-shadow" data-testid="job-card">
       <CardHeader>
         <div className="flex justify-between items-start mb-2">
           <Badge variant="secondary" className="text-xs">
@@ -51,7 +51,7 @@ export function JobCard({ job }: JobCardProps) {
             ))}
           </div>
         </div>
-        <Button className="w-full" size="sm">
+        <Button className="w-full glass-effect text-regent-gray-900 font-semibold hover:text-regent-gray-900" size="sm">
           Läs mer
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>

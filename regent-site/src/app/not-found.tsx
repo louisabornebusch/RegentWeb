@@ -15,7 +15,7 @@ export default function NotFound() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="bg-regent-blue hover:bg-regent-blue-dark">
+          <Button asChild size="lg" className="glass-effect text-regent-gray-900 font-semibold hover:text-regent-gray-900">
             <Link href="/">
               <House className="mr-2 h-5 w-5" />
               Tillbaka till startsidan
@@ -24,7 +24,7 @@ export default function NotFound() {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-regent-blue text-regent-blue hover:bg-regent-blue hover:text-white"
+            className="glass-effect-dark text-regent-gray-900 border-regent-gray-900/20 hover:text-regent-gray-900 hover:border-regent-gray-900/40"
             onClick={() => window.history.back()}
           >
             <ArrowLeft className="mr-2 h-5 w-5" />

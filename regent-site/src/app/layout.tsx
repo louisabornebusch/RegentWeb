@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
-import { TrustBar } from '@/components/TrustBar';
 import { Footer } from '@/components/Footer';
 import { SkipLink } from '@/components/SkipLink';
 
@@ -41,7 +40,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col">
           <SkipLink />
-          <TrustBar />
           <Header />
           <main id="main-content" className="flex-1" role="main">
             {children}

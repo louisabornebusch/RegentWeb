@@ -66,7 +66,7 @@ export default function CareersPage() {
         <h2 className="text-3xl font-bold text-regent-gray-900 mb-8">Lediga tjänster</h2>
         <div className="grid gap-6 mb-16">
           {jobOpenings.map((job, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="glass-effect hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
@@ -105,7 +105,7 @@ export default function CareersPage() {
         <h2 className="text-3xl font-bold text-regent-gray-900 mb-8">Varför välja Regent?</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="text-center">
+            <Card key={index} className="text-center glass-effect">
               <CardContent className="pt-6">
                 <benefit.icon className="h-12 w-12 text-regent-blue mx-auto mb-4" />
                 <h3 className="font-semibold text-regent-gray-900 mb-2">{benefit.title}</h3>

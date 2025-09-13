@@ -45,7 +45,7 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button asChild>
+            <Button asChild className="glass-effect text-regent-gray-900 font-semibold hover:text-regent-gray-900">
               <Link href="/kontakt">Kontakta oss</Link>
             </Button>
           </div>
@@ -75,7 +75,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4">
-                <Button asChild className="w-full">
+                <Button asChild className="w-full glass-effect text-regent-gray-900 font-semibold hover:text-regent-gray-900">
                   <Link href="/kontakt">Kontakta oss</Link>
                 </Button>
               </div>

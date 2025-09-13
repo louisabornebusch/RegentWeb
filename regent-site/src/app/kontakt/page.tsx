@@ -142,7 +142,7 @@ export default function ContactPage() {
                 />
               </div>
               
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full glass-effect text-regent-gray-900 font-semibold hover:text-regent-gray-900">
                 Skicka meddelande
               </Button>
             </form>

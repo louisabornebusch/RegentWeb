@@ -64,7 +64,7 @@ export default function NewsPage() {
         {/* News Grid */}
         <div className="grid gap-8">
           {news.map((article, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="glass-effect hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <span className="inline-block bg-regent-blue text-white text-xs px-2 py-1 rounded">
@@ -83,7 +83,7 @@ export default function NewsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-regent-gray-700 mb-4">{article.excerpt}</p>
-                <Button variant="ghost" className="p-0 h-auto text-regent-blue hover:text-regent-blue-dark">
+                <Button variant="ghost" className="p-0 h-auto text-regent-blue hover:text-regent-blue-dark glass-effect">
                   Läs mer
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>

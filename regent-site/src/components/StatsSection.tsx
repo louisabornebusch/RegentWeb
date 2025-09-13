@@ -1,6 +1,6 @@
 'use client';
 
-import { Users, Award, TrendingUp, Clock, Code, Shield, Cloud, TestTube, Users2 } from 'lucide-react';
+import { Users, Award, TrendingUp, Clock, Code, Shield, Cloud, TestTube, Users2, Leaf, Lock } from 'lucide-react';
 
 interface StatItem {
   icon: React.ComponentType<{ className?: string }>;
@@ -13,6 +13,34 @@ interface StatItem {
 export function StatsSection() {
 
   const stats: StatItem[] = [
+    {
+      icon: Shield,
+      value: 0,
+      suffix: '',
+      label: 'ISO 27001 Certifierade',
+      color: 'text-yellow-500',
+    },
+    {
+      icon: Award,
+      value: 0,
+      suffix: '',
+      label: 'Great Place to Work',
+      color: 'text-yellow-500',
+    },
+    {
+      icon: Leaf,
+      value: 0,
+      suffix: '',
+      label: 'Hållbar utveckling',
+      color: 'text-yellow-500',
+    },
+    {
+      icon: Lock,
+      value: 0,
+      suffix: '',
+      label: 'Säkerhet i fokus',
+      color: 'text-yellow-500',
+    },
     {
       icon: Users,
       value: 100,
@@ -35,13 +63,6 @@ export function StatsSection() {
       color: 'text-yellow-500',
     },
     {
-      icon: Clock,
-      value: 24,
-      suffix: '/7',
-      label: 'Support',
-      color: 'text-yellow-500',
-    },
-    {
       icon: Code,
       value: 35,
       suffix: '+',
@@ -57,7 +78,7 @@ export function StatsSection() {
     },
     {
       icon: Cloud,
-      value: 25,
+      value: 15,
       suffix: '+',
       label: 'AI & Cloud-specialister',
       color: 'text-yellow-500',
@@ -87,8 +108,10 @@ export function StatsSection() {
 
 
   return (
-    <section id="stats-section" className="bg-regent-gray-900 py-8 overflow-hidden">
-      <div className="relative">
+    <section id="stats-section" className="bg-gradient-to-br from-regent-gray-800 to-regent-gray-900 py-8 overflow-hidden relative">
+      {/* Glass overlay */}
+      <div className="absolute inset-0 glass-overlay"></div>
+      <div className="relative z-10">
         {/* Rolling animation container */}
         <div className="flex animate-roll">
           {/* First set of stats */}
@@ -101,14 +124,16 @@ export function StatsSection() {
                 <div className="p-3 bg-regent-gray-800 rounded-full group-hover:bg-yellow-500 transition-colors duration-300">
                   <stat.icon className={`h-6 w-6 ${stat.color} group-hover:text-regent-gray-900 transition-colors duration-300`} />
                 </div>
-                <div className="flex items-baseline space-x-1">
-                  <span className="text-3xl font-bold text-yellow-500">
-                    {stat.value}
-                  </span>
-                  <span className="text-xl font-bold text-yellow-500">
-                    {stat.suffix}
-                  </span>
-                </div>
+                {stat.value > 0 ? (
+                  <div className="flex items-baseline space-x-1">
+                    <span className="text-3xl font-bold text-yellow-500">
+                      {stat.value}
+                    </span>
+                    <span className="text-xl font-bold text-yellow-500">
+                      {stat.suffix}
+                    </span>
+                  </div>
+                ) : null}
                 <span className="text-regent-gray-300 text-sm font-medium whitespace-nowrap">
                   {stat.label}
                 </span>
@@ -126,14 +151,16 @@ export function StatsSection() {
                 <div className="p-3 bg-regent-gray-800 rounded-full group-hover:bg-yellow-500 transition-colors duration-300">
                   <stat.icon className={`h-6 w-6 ${stat.color} group-hover:text-regent-gray-900 transition-colors duration-300`} />
                 </div>
-                <div className="flex items-baseline space-x-1">
-                  <span className="text-3xl font-bold text-yellow-500">
-                    {stat.value}
-                  </span>
-                  <span className="text-xl font-bold text-yellow-500">
-                    {stat.suffix}
-                  </span>
-                </div>
+                {stat.value > 0 ? (
+                  <div className="flex items-baseline space-x-1">
+                    <span className="text-3xl font-bold text-yellow-500">
+                      {stat.value}
+                    </span>
+                    <span className="text-xl font-bold text-yellow-500">
+                      {stat.suffix}
+                    </span>
+                  </div>
+                ) : null}
                 <span className="text-regent-gray-300 text-sm font-medium whitespace-nowrap">
                   {stat.label}
                 </span>
