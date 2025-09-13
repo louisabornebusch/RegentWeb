@@ -22,11 +22,12 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-regent-blue rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">R</span>
-            </div>
-            <span className="text-xl font-bold text-regent-gray-900">Regent</span>
+          <Link href="/" className="flex items-center">
+            <img 
+              src="/regent-logo.png" 
+              alt="Regent" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
