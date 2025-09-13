@@ -19,13 +19,13 @@ export function Footer() {
               Vi skapar värde genom teknisk excellens och mänsklig samhörighet. 
               ISO-certifierad IT-konsult med fokus på hållbara lösningar.
             </p>
-            <div className="space-y-2 text-sm text-regent-gray-300">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
+            <div className="glass-contact text-sm text-regent-gray-300">
+              <div className="glass-contact-item flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-regent-blue" />
                 <span>Norr Mälarstrand 22, 112 20 Stockholm</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
+              <div className="glass-contact-item flex items-center gap-2">
+                <Mail className="h-4 w-4 text-regent-blue" />
                 <a href="mailto:info@regent.se" className="hover:text-white transition-colors">
                   info@regent.se
                 </a>
@@ -36,55 +36,55 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-4">Snabblänkar</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
+            <div className="glass-list text-sm">
+              <div className="glass-list-item">
                 <Link href="/om-oss" className="text-regent-gray-300 hover:text-white transition-colors">
                   Om oss
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div className="glass-list-item">
                 <Link href="/uppdrag" className="text-regent-gray-300 hover:text-white transition-colors">
                   Uppdrag
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div className="glass-list-item">
                 <Link href="/jobb" className="text-regent-gray-300 hover:text-white transition-colors">
                   Karriär
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div className="glass-list-item">
                 <Link href="/kontakt" className="text-regent-gray-300 hover:text-white transition-colors">
                   Kontakt
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
 
           {/* Policies */}
           <div>
             <h3 className="font-semibold mb-4">Policies</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
+            <div className="glass-list text-sm">
+              <div className="glass-list-item">
                 <Link href="/policy/kvalitet" className="text-regent-gray-300 hover:text-white transition-colors">
                   Kvalitetspolicy
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div className="glass-list-item">
                 <Link href="/policy/miljo" className="text-regent-gray-300 hover:text-white transition-colors">
                   Miljöpolicy
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div className="glass-list-item">
                 <Link href="/policy/informationssakerhet" className="text-regent-gray-300 hover:text-white transition-colors">
                   Informationssäkerhet
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div className="glass-list-item">
                 <Link href="/policy/integritet" className="text-regent-gray-300 hover:text-white transition-colors">
                   Integritetspolicy
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -25,9 +25,9 @@ export function CapabilityCard({ icon: Icon, title, description, technologies }:
       <CardContent>
         <div className="space-y-2">
           <h4 className="font-semibold text-regent-gray-900 text-sm">Våra kompetenser:</h4>
-          <div className="grid grid-cols-1 gap-1">
+          <div className="glass-tech-grid">
             {technologies.map((tech, index) => (
-              <div key={index} className="text-xs text-regent-gray-600 bg-regent-gray-50 px-2 py-1 rounded">
+              <div key={index} className="glass-tech-tag">
                 {tech}
               </div>
             ))}

@@ -281,3 +281,77 @@
     0 4px 20px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+
+/* Clean Modern Glass List Styles */
+.glass-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.glass-list-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.glass-list-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transform: translateX(2px);
+}
+
+/* Clean Glass Contact Info */
+.glass-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.glass-contact-item {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 8px 10px;
+  transition: all 0.2s ease;
+}
+
+.glass-contact-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transform: translateX(1px);
+}
+
+/* Clean Glass Technology Tags */
+.glass-tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.glass-tech-tag {
+  background: rgba(85, 194, 240, 0.08);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(85, 194, 240, 0.15);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.glass-tech-tag:hover {
+  background: rgba(85, 194, 240, 0.12);
+  border: 1px solid rgba(85, 194, 240, 0.25);
+  transform: translateY(-1px);
+}
