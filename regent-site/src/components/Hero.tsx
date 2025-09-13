@@ -10,6 +10,9 @@ export function Hero() {
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
+      {/* Background image overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
       <div className="relative container mx-auto px-4 py-24 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -46,6 +49,22 @@ export function Hero() {
             <div className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
               <span className="text-sm">15+ års erfarenhet</span>
+            </div>
+          </div>
+
+          {/* Great Place to Work Award */}
+          <div className="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white mb-2">
+                Bäst i Sverige och Europa 2 år i rad
+              </div>
+              <div className="text-blue-100 text-sm italic">
+                "Att lyckas samla några av de mest kompetenta individerna i branschen under samma tak är en bedrift. 
+                Att dessutom få dem att fungera så fantastiskt bra ihop är ett underverk."
+              </div>
+              <div className="text-blue-200 text-xs mt-2">
+                - Juryns motivering, Great Place To Work
+              </div>
             </div>
           </div>
         </div>
