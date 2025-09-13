@@ -22,7 +22,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-regent-gray-300">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Storgatan 123, 111 22 Stockholm</span>
+                <span>Norr Mälarstrand 22, 112 20 Stockholm</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
@@ -88,8 +88,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-regent-gray-700 mt-8 pt-8 text-center text-sm text-regent-gray-400">
-          <p>&copy; 2024 Regent AB. Alla rättigheter förbehållna.</p>
+        <div className="border-t border-regent-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-regent-gray-400">
+              <p>&copy; 2025 Regent AB. Alla rättigheter förbehållna.</p>
+            </div>
+            <div className="flex items-center gap-4 text-sm text-regent-gray-300">
+              <span className="font-semibold">Följ oss:</span>
+              <a href="#" className="hover:text-white transition-colors">Facebook</a>
+              <a href="#" className="hover:text-white transition-colors">Instagram</a>
+              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
