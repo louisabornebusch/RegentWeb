@@ -70,14 +70,6 @@ export function ImageSection() {
 
           {/* Office Image */}
           <div className="space-y-4">
-            <Image
-              src="/images/office-photo.jpg"
-              alt="Regent office - Modern open-plan workspace with employees"
-              width={800}
-              height={450}
-              className="rounded-lg shadow-lg w-full h-auto"
-              priority
-            />
             <div className="text-center">
               <h3 className="text-xl font-semibold text-regent-gray-900 mb-2">
                 Vårt kontor
@@ -86,6 +78,15 @@ export function ImageSection() {
                 Modernt kontor i hjärtat av Stockholm
               </p>
             </div>
+
+            <Image
+              src="/images/office-photo.jpg"
+              alt="Regent office - Modern open-plan workspace with employees"
+              width={800}
+              height={450}
+              className="rounded-lg shadow-lg w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </div>
