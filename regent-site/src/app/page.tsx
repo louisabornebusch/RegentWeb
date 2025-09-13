@@ -149,15 +149,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-regent-blue py-20 text-white text-center">
+      <section className="py-20 text-center" style={{ backgroundColor: '#3795be', color: '#0f172a' }}>
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6" style={{ color: '#0f172a' }}>
             Vill du veta mer om oss, hör gärna av dig till mig:
           </h2>
           <div className="mb-8">
             <a 
               href="mailto:info@regent.se" 
-              className="text-2xl font-semibold text-white hover:text-blue-100 transition-colors"
+              className="text-2xl font-semibold transition-colors"
+              style={{ color: '#0f172a' }}
             >
               info@regent.se
             </a>
@@ -165,13 +166,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/uppdrag"
-              className="inline-flex items-center justify-center px-8 py-3 bg-white text-regent-blue font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[>svg]:px-4 glass-effect text-regent-gray-900 font-semibold hover:text-regent-gray-900"
             >
               Se våra uppdrag
             </Link>
             <Link
               href="/kontakt"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-regent-blue transition-colors"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[>svg]:px-4 glass-effect-dark text-white border-white/20 hover:text-white hover:border-white/40"
             >
               Kontakta oss
             </Link>
